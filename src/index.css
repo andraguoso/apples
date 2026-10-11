@@ -1,0 +1,23 @@
+:root {
+  --main: #564256;
+  --secondary: #793E54;
+  --light: #D8D2E1;
+  --dark: #34435E;
+}
+
+body {
+  margin: 0;
+  background: var(--light);
+  color: var(--dark);
+}
+
+h1,
+h2 {
+  color: var(--main);
+}
+
+button {
+  background: var(--main);
+  color: var(--light);
+  border: 2px solid var(--dark);
+}
