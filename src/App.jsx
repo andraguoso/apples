@@ -7,7 +7,9 @@ import SayHi from "./components/SayHi";
 const chapters = [Hero, About, Projects, SayHi]
 
 function App() {
-  const [step, setStep] = useState(0)
+  const [step, setStep] = useState(0);
+  const [soundOn, setSoundOn] = useState(false);
+
   const finished = step === chapters.length - 1;
 
   return (
@@ -16,8 +18,12 @@ function App() {
         <Chapter key={i} />
       ))}
 
+      <button className="mute" onClick={() => setSoundOn(!soundOn)}>
+        {soundOn ? "sound on" : "sound off"}
+      </button>
+
       {!finished && (
-        <button onClick={() => setStep(step + 1)}>continue!</button>
+        <SoundButton onClick={() => setStep(step + 1)}>continue!</SoundButton>
       )}
     </main>
   );
