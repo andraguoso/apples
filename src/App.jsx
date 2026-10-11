@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import SayHi from "./components/SayHi";
+import SoundButton from "./components/SoundButton";
 
 const chapters = [Hero, About, Projects, SayHi]
 
@@ -23,7 +24,7 @@ function App() {
       </button>
 
       {!finished && (
-        <SoundButton onClick={() => setStep(step + 1)}>continue!</SoundButton>
+        <SoundButton soundOn={soundOn} onClick={() => setStep(step + 1)}>continue!</SoundButton>
       )}
     </main>
   );

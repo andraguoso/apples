@@ -1,4 +1,4 @@
-export default function ProjectCard({ name, blurb, link }) {
+export default function ProjectCard({ name, blurb, link, style }) {
     return (
         <article className="card" style={style}>
             <h2>{name}</h2>
