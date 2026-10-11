@@ -10,8 +10,11 @@ export default function Projects() {
     return (
         <section>
             <h2>my projects</h2>
-            {projects.map((project) => (
-                <ProjectCard key={project.name} {...project} />
+            {projects.map((project, i) => (
+                <ProjectCard key={project.name}
+                    {...project}
+                    style={{ "--i": i }}
+                />
             ))}
         </section>
     );
