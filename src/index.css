@@ -1,19 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
   --main: #564256;
   --secondary: #793E54;
   --light: #D8D2E1;
   --dark: #34435E;
+
+  --heading: 4.2 vh;
+  --subheading: 3.3 vh;
+  --body: 2.8vh;
+
+  --heading-font: "Michroma";
+  --body-font: "Prompt", sans-serif;
 }
 
 body {
   margin: 0;
   background: var(--light);
   color: var(--dark);
+  font-family: var(--body-font);
+  font-size: var(--body);
+  line-height: 1.6;
 }
 
 h1,
 h2 {
+  font-family: var(--heading-font);
+  font-size: var(--subheading);
   color: var(--main);
+}
+
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 8vh 6vw;
 }
 
 button {
