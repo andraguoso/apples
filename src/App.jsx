@@ -3,9 +3,10 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import SayHi from "./components/SayHi";
+import Interests from "./components/Interests"
 import SoundButton from "./components/SoundButton";
 
-const chapters = [Hero, About, Projects, SayHi]
+const chapters = [Hero, About, Projects, Interests, SayHi]
 
 function App() {
   const [step, setStep] = useState(0);

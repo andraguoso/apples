@@ -9,7 +9,7 @@ const projects = [
 export default function Projects() {
     return (
         <section>
-            <h2>my projects</h2>
+            <h1>my projects</h1>
             {projects.map((project, i) => (
                 <ProjectCard key={project.name}
                     {...project}
