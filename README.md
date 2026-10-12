@@ -17,5 +17,7 @@ Another personal website that now expands on more unexplored topics, with a pale
 - adapting vanilla HTML/CSS/JS structures to this
 
 ## run it yourself
+```
 npm install
 npm run dev
+```
