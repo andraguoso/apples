@@ -7,7 +7,7 @@ New Neocities layout.
 Another personal website that now expands on more unexplored topics, with a palette I picked from Coolors and two fonts I got from Google Fonts.
 
 ## how I made it
-- React + Vite, plain CSS (no UI libraries)
+- React + Vite, plain CSS plus TailwindCSS
 - started from the Snowglobe React + Better Web Design guide,
   then changed: layout, sequence, and additional buttons
 - my own design guide is in DESIGN.md
