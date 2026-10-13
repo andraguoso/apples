@@ -13,20 +13,40 @@ function App() {
   const [soundOn, setSoundOn] = useState(false);
 
   const finished = step === chapters.length - 1;
-
+  const ChapterNow = chapters[step];
   return (
-    <main>
-      {chapters.slice(0, step + 1).map((Chapter, i) => (
-        <Chapter key={i} />
-      ))}
-
+    <main className="p-10">
       <button className="mute" onClick={() => setSoundOn(!soundOn)}>
         {soundOn ? "sound on" : "sound off"}
       </button>
 
-      {!finished && (
-        <SoundButton soundOn={soundOn} onClick={() => setStep(step + 1)}>continue!</SoundButton>
-      )}
+      <ChapterNow />
+
+      <div className="flex flex-row gap-5">
+        {
+          step !== 0 && (
+            <button onClick={() => setStep(0)}>
+              home
+            </button>
+          )}
+
+        {
+          step !== 0 && (
+            <button onClick={() => setStep(step - 1)}>
+              go back
+            </button>
+          )
+        }
+
+        {
+          !finished && (
+            <SoundButton
+              soundOn={soundOn}
+              onClick={() => setStep(step + 1)}>
+              continue!
+            </SoundButton>
+          )}
+      </div>
     </main>
   );
 }
