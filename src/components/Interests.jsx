@@ -17,7 +17,7 @@ export default function Interests() {
         <section>
             <h1>my interests</h1>
             {interests.map((interest, i) => (
-                <InterestCard key={interest.name}
+                <InterestCard key={interest.topic}
                     {...interest}
                     style={{ "--i": i }}
                 />
