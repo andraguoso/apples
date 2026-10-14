@@ -22,7 +22,7 @@ function App() {
 
       <ChapterNow />
 
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-row gap-5 justify-center">
         {
           step !== 0 && (
             <button onClick={() => setStep(0)}>
