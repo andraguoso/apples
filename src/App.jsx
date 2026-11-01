@@ -1,21 +1,21 @@
 import { useState } from 'react';
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Projects from "./components/Projects";
-import SayHi from "./components/SayHi";
-import Interests from "./components/Interests"
+import Math from "./components/Math"
+import Biology from "./components/Biology"
 import SoundButton from "./components/SoundButton";
 
-const chapters = [Hero, About, Projects, Interests, SayHi]
+const chapters = [Hero, Projects, Math, Biology]
 
 function App() {
   const [step, setStep] = useState(0);
-  const [soundOn, setSoundOn] = useState(false);
+  const [soundOn, setSoundOn] = useState(0);
 
   const finished = step === chapters.length - 1;
   const ChapterNow = chapters[step];
   return (
     <main className="p-10">
+
       <button className="mute" onClick={() => setSoundOn(!soundOn)}>
         {soundOn ? "sound on" : "sound off"}
       </button>
