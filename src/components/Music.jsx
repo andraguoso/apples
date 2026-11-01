@@ -57,20 +57,20 @@ export default function SongPlayer() {
     }
 
     return (
-        <div>
-            <div className="flex flex-col w-64 bg-(--secondary) p-3">
+        <div className="fixed top-5 right-5 z-50">
+            <div className="flex flex-col w-fit bg-(--secondary) items-center p-3">
                 <span className="text-[2.3vh] text-(--light)">{songs[i].name}</span>
                 <span className="text-[2vh] text-(--light)"> {songs[i].artist} · {songs[i].album}</span>
-                <div className="flex flex-row gap-5 py-1">
-                    <button className="text-[2vh] px-2" onClick={() => {
+                <div className="flex flex-row gap-3 py-1">
+                    <button className="text-[1.7vh] px-2" onClick={() => {
                         const backI = (i - 1 + songs.length) % songs.length;
                         setI(backI);
                         PlaySong(songs[backI].music);
                     }}>⏮</button>
-                    <button className="text-[2vh] px-2" onClick={togglePlay}>
+                    <button className="text-[1.7vh] px-2" onClick={togglePlay}>
                         ⏯
                     </button>
-                    <button className="text-[2vh] px-2" onClick={() => {
+                    <button className="text-[1.7vh] px-2" onClick={() => {
                         const nextI = (i + 1) % songs.length;
                         setI(nextI);
                         PlaySong(songs[nextI].music);
