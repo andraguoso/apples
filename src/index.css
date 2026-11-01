@@ -8,8 +8,8 @@
   --light: #D8D2E1;
   --dark: #34435E;
 
-  --heading: 4.2 vh;
-  --subheading: 3.3 vh;
+  --heading: 4.5vh;
+  --subheading: 3.3vh;
   --body: 2.8vh;
 
   --heading-font: "Michroma";
@@ -25,7 +25,12 @@ body {
   line-height: 1.6;
 }
 
-h1,
+h1 {
+  font-family: var(--heading-font);
+  font-size: var(--heading);
+  color: var(--main);
+}
+
 h2 {
   font-family: var(--heading-font);
   font-size: var(--subheading);
@@ -33,7 +38,7 @@ h2 {
 }
 
 section {
-  max-width: 50rem;
+  max-width: 100rem;
   margin: 0 auto;
   padding: 8vh 6vw;
 }
