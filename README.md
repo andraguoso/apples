@@ -13,8 +13,11 @@ Another personal website that now expands on more unexplored topics, with a pale
 - my own design guide is in DESIGN.md
 
 ## what I learned / struggled with
-- the website went down two times and i forgot how to read js
+- the website went down five times and i forgot how to read js
 - adapting vanilla HTML/CSS/JS structures to this
+- making a play/pause button
+- getting images to look proportionate
+- editing font-size with tailwindcss
 
 ## run it yourself
 ```
