@@ -47,6 +47,7 @@ button {
   background: var(--main);
   color: var(--light);
   border: 2px solid var(--dark);
+  height: fit-content;
 }
 
 @keyframes fade-up {
