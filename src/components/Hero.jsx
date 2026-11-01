@@ -7,7 +7,9 @@ export default function Hero() {
     return (
         <section className="flex flex-col m-0 gap-5">
             <div className="flex flex-col justify-center text-center align-items">
-                <span className="text-[5.5vh] text-[color:var(--main)] font-[family-name:var(--heading-font)]">hello world</span>
+                <span className="text-[5.5vh] text-[color:var(--main)] font-[family-name:var(--heading-font)]">
+                    hello world
+                </span>
                 <p>
                     I like spending long hours in front of my computer! I need to stretch more frequently.
                 </p>
