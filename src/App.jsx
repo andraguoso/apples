@@ -16,7 +16,7 @@ function App() {
   const finished = step === chapters.length - 1;
   const ChapterNow = chapters[step];
   return (
-    <main className="p-10">
+    <main className="flex flex-col gap-5 p-10">
 
       <SongPlayer />
 
