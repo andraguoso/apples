@@ -7,15 +7,21 @@ import goDeep from "../assets/go_deep.mp3"
 
 let songs = [
     {
-        name: "Prada - Arca",
+        name: "Prada",
+        artist: "Arca",
+        album: "KICK ii",
         music: prada
     },
     {
-        name: "Sociopathic Dance Queen - Amaarae",
+        name: "Sociopathic Dance Queen",
+        artist: "Amaarae",
+        album: "Fountain Baby",
         music: sdq
     },
     {
-        name: "Go Deep - Janet Jackson",
+        name: "Go Deep",
+        artist: "Janet Jackson",
+        album: "The Velvet Rope",
         music: goDeep
     }
 ]
@@ -52,9 +58,10 @@ export default function SongPlayer() {
 
     return (
         <div>
-            <div className="flex flex-col">
-                <span>{songs[i].name}</span>
-                <div className="flex flex-row gap-5">
+            <div className="flex flex-col w-64 bg-(--secondary) p-3">
+                <span className="text-[2.3vh] text-(--light)">{songs[i].name}</span>
+                <span className="text-[2vh] text-(--light)"> {songs[i].artist} · {songs[i].album}</span>
+                <div className="flex flex-row gap-5 py-1">
                     <button className="text-[2vh] px-2" onClick={() => {
                         const backI = (i - 1 + songs.length) % songs.length;
                         setI(backI);
