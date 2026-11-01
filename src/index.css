@@ -39,8 +39,8 @@ h2 {
 
 section {
   max-width: 100rem;
-  margin: 0 auto;
-  padding: 8vh 6vw;
+  margin: 0;
+  padding: 5vh 5vw;
 }
 
 button {
