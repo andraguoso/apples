@@ -3,9 +3,11 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Math from "./components/Math"
 import Biology from "./components/Biology"
-import SoundButton from "./components/SoundButton";
 
-const chapters = [Hero, Projects, Math, Biology]
+import SoundButton from "./components/SoundButton";
+import SongPlayer from "./components/Music";
+
+const chapters = [Hero, Projects, Math, Biology];
 
 function App() {
   const [step, setStep] = useState(0);
@@ -16,9 +18,13 @@ function App() {
   return (
     <main className="p-10">
 
-      <button className="mute" onClick={() => setSoundOn(!soundOn)}>
-        {soundOn ? "sound on" : "sound off"}
-      </button>
+      <div className="flex flex-row gap-10">
+        <button className="mute" onClick={() => setSoundOn(!soundOn)}>
+          {soundOn ? "sound on" : "sound off"}
+        </button>
+
+        <SongPlayer />
+      </div>
 
       <ChapterNow />
 
