@@ -7,7 +7,7 @@ const interests = [
     },
     {
         topic: "human histology",
-        rant: ""
+        rant: "i used to open my dad's histology books and just look at all the different images. he also likes to take pictures of interesting cases and show them to me, and sometimes asks me to recognize the tissue. i remember going down a few rabbitholes about desmosomes in epitelial tissue..."
     }
 
 ]
