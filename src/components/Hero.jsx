@@ -3,6 +3,7 @@ import fish from "../assets/main_fish.jpeg"
 import bee from "../assets/main_lpsBee.jpeg"
 import dog from "../assets/main_dog.jpeg"
 import bunny from "../assets/main_bunny.jpeg"
+
 export default function Hero() {
     return (
         <section className="flex flex-col m-0 gap-5">
