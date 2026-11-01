@@ -22,6 +22,7 @@ let songs = [
 
 export default function SongPlayer() {
     const [i, setI] = useState(0);
+    const [plays, setPlays] = useState(false);
     const audio = useRef(null);
 
     function PlaySong(song) {
@@ -32,6 +33,21 @@ export default function SongPlayer() {
         audio.current.volume = 0.3;
         audio.current.currentTime = 0;
         audio.current.play();
+
+        setPlays(true);
+    }
+
+    function togglePlay() {
+        if (!audio.current) {
+            PlaySong(songs[i].music); return;
+        }
+
+        if (plays) {
+            audio.current.pause(); setPlays(false);
+        }
+        else {
+            audio.current.play(); setPlays(true);
+        }
     }
 
     return (
@@ -39,15 +55,15 @@ export default function SongPlayer() {
             <div className="flex flex-col">
                 <span>{songs[i].name}</span>
                 <div className="flex flex-row gap-5">
-                    <button className="text-[2vh]" onClick={() => {
+                    <button className="text-[2vh] px-2" onClick={() => {
                         const backI = (i - 1 + songs.length) % songs.length;
                         setI(backI);
                         PlaySong(songs[backI].music);
                     }}>⏮</button>
-                    <button className="text-[2vh]" onClick={() => PlaySong(songs[i].music)}>
+                    <button className="text-[2vh] px-2" onClick={togglePlay}>
                         ⏯
                     </button>
-                    <button className="text-[2vh]" onClick={() => {
+                    <button className="text-[2vh] px-2" onClick={() => {
                         const nextI = (i + 1) % songs.length;
                         setI(nextI);
                         PlaySong(songs[nextI].music);
