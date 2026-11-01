@@ -18,13 +18,7 @@ function App() {
   return (
     <main className="p-10">
 
-      <div className="flex flex-row gap-10">
-        <button className="mute" onClick={() => setSoundOn(!soundOn)}>
-          {soundOn ? "sound on" : "sound off"}
-        </button>
-
-        <SongPlayer />
-      </div>
+      <SongPlayer />
 
       <ChapterNow />
 
