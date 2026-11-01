@@ -3,7 +3,7 @@ export default function ProjectCard({ name, blurb, link, style }) {
         <article className="card" style={style}>
             <h2>{name}</h2>
             <p>{blurb}</p>
-            <a href={link}>visit!</a>
+            <a href={link} target="_blank">visit!</a>
         </article>
     );
 }
